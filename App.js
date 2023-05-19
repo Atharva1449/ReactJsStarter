@@ -1,3 +1,5 @@
+import React from "react";
+import  ReactDOM  from "react-dom/client";
 const heading = React.createElement("h1", { id: "yooo" }, "hello"); //so the id and other attribute we did in html we pass here in reeact
 const heading2 = React.createElement("h2", { id: "yooo2" }, "hello2"); //so the id and other attribute we did in html we pass here in reeact
 const container = React.createElement("div", { id: "container" }, [

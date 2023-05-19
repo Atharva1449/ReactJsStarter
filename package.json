@@ -1,0 +1,27 @@
+{
+  "name": "initialproj",
+  "version": "1.0.0",
+  "description": "initial proj",
+ 
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atharva1449/ReactJsStarter.git"
+  },
+  "author": "Atharva Dawande",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atharva1449/ReactJsStarter/issues"
+  },
+  "homepage": "https://github.com/Atharva1449/ReactJsStarter#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
