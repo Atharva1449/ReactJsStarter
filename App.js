@@ -1,12 +1,32 @@
 import React from "react";
 import  ReactDOM  from "react-dom/client";
-const heading = React.createElement("h1", { id: "yooo" }, "hello"); //so the id and other attribute we did in html we pass here in reeact
-const heading2 = React.createElement("h2", { id: "yooo2" }, "hello2"); //so the id and other attribute we did in html we pass here in reeact
-const container = React.createElement("div", { id: "container" }, [
-  heading,
-  heading2,
-]); //here as it is div tag we are passing h1 and h2 tag but as there are two tags we pass in form of array
+//below is react element
+const title=(
+  <h1 className="h1class">Hello</h1>
+);
+
+//below is react function component
+const Title2=()=>{
+return (
+  <h2 className="h2class">Hello2</h2>
+);
+}
+
+// <Title2/>   this is component composition
+//{} in this you can pass any code so the above same line of code can be also printed
+//using {Title2()} now why this works coz functional component is basic js function
+const Container=()=>{
+  return(
+    <div>
+      {title}
+      {2-3}
+      <Title2/> 
+      {Title2()} 
+      <h3>hello3</h3>
+    </div>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-console.log(heading); //actually heading is an object if you check in consolelog
-root.render(container);
+//console.log(heading); //actually heading is an object if you check in consolelog
+root.render(<Container></Container>);
