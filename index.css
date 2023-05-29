@@ -1,0 +1,30 @@
+.list-container{
+    list-style: none;
+    display: flex;
+  
+}
+nav{
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+
+}
+.searchboxli{
+    border-radius: 10px;
+    list-style-position:inside;
+    border: 10px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.searchbar{
+    
+
+    border: none;
+  
+ 
+}
+.icon_navbar{
+    width: 34px;
+    height: 34px;
+   
+}
+
