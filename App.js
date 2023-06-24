@@ -1796,10 +1796,10 @@ const Header=()=>{
 const CardTemplate=(props)=>{
   return (
     <div className="card">
-      <h2>{restaurantList[2].data?.name}</h2>
-      <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+restaurantList[2].data?.cloudinaryImageId}></img>
-      <h3>{restaurantList[2].data?.cuisines.join(" ,")}</h3>
-      <h4>{restaurantList[2].data?.avgRating}</h4>
+      <h2>{props.restro.data?.name}</h2>
+      <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+props.restro.data?.cloudinaryImageId}></img>
+      <h3>{props.restro.data?.cuisines.join(" ,")}</h3>
+      <h4>{props.restro.data?.avgRating}</h4>
     </div>
   );
 }
