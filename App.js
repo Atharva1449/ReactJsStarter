@@ -1794,24 +1794,25 @@ const Header=()=>{
 }
 
 const CardTemplate=(props)=>{
+  const {name, cloudinaryImageId,cuisines,avgRating}=props.restro;
   return (
     <div className="card">
-      <h2>{props.restro.data?.name}</h2>
-      <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+props.restro.data?.cloudinaryImageId}></img>
-      <h3>{props.restro.data?.cuisines.join(" ,")}</h3>
-      <h4>{props.restro.data?.avgRating}</h4>
+      <h2>{name}</h2>
+      <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId}></img>
+      <h3>{cuisines.join(" ,")}</h3>
+      <h4>{avgRating}</h4>
     </div>
   );
 }
 const Body=()=>{
   return (
     <div className="restaurantCardsList">
-<div><CardTemplate restro ={restaurantList[0]}/></div>
-<div><CardTemplate restro ={restaurantList[1]}/></div>
-<div><CardTemplate restro ={restaurantList[2]}/></div>
-<div><CardTemplate restro ={restaurantList[3]}/></div>
-<div><CardTemplate restro ={restaurantList[4]}/></div>
-<div><CardTemplate restro ={restaurantList[5]}/></div>
+<div><CardTemplate restro ={restaurantList[0].data}/></div>
+<div><CardTemplate restro ={restaurantList[1].data}/></div>
+<div><CardTemplate restro ={restaurantList[2].data}/></div>
+<div><CardTemplate restro ={restaurantList[3].data}/></div>
+<div><CardTemplate restro ={restaurantList[4].data}/></div>
+<div><CardTemplate restro ={restaurantList[5].data}/></div>
 </div>
   );
 }
