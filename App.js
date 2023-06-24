@@ -1793,8 +1793,8 @@ const Header=()=>{
   );
 }
 
-const CardTemplate=(props)=>{
-  const {name, cloudinaryImageId,cuisines,avgRating}=props.restro;
+const CardTemplate=({restro})=>{
+  const {name, cloudinaryImageId,cuisines,avgRating}=restro;
   return (
     <div className="card">
       <h2>{name}</h2>
