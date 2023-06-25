@@ -1793,8 +1793,8 @@ const Header=()=>{
   );
 }
 
-const CardTemplate=({restro})=>{
-  const {name, cloudinaryImageId,cuisines,avgRating}=restro;
+const CardTemplate=({name,cloudinaryImageId,cuisines,avgRating})=>{
+  
   return (
     <div className="card">
       <h2>{name}</h2>
@@ -1807,12 +1807,12 @@ const CardTemplate=({restro})=>{
 const Body=()=>{
   return (
     <div className="restaurantCardsList">
-<div><CardTemplate restro ={restaurantList[0].data}/></div>
-<div><CardTemplate restro ={restaurantList[1].data}/></div>
-<div><CardTemplate restro ={restaurantList[2].data}/></div>
-<div><CardTemplate restro ={restaurantList[3].data}/></div>
-<div><CardTemplate restro ={restaurantList[4].data}/></div>
-<div><CardTemplate restro ={restaurantList[5].data}/></div>
+<div><CardTemplate {...restaurantList[0].data}/></div>
+<div><CardTemplate {...restaurantList[1].data}/></div>
+<div><CardTemplate {...restaurantList[2].data}/></div>
+<div><CardTemplate {...restaurantList[3].data}/></div>
+<div><CardTemplate {...restaurantList[4].data}/></div>
+<div><CardTemplate {...restaurantList[5].data}/></div>
 </div>
   );
 }
