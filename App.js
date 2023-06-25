@@ -1807,12 +1807,9 @@ const CardTemplate=({name,cloudinaryImageId,cuisines,avgRating})=>{
 const Body=()=>{
   return (
     <div className="restaurantCardsList">
-<div><CardTemplate {...restaurantList[0].data}/></div>
-<div><CardTemplate {...restaurantList[1].data}/></div>
-<div><CardTemplate {...restaurantList[2].data}/></div>
-<div><CardTemplate {...restaurantList[3].data}/></div>
-<div><CardTemplate {...restaurantList[4].data}/></div>
-<div><CardTemplate {...restaurantList[5].data}/></div>
+      { restaurantList.map((restaurantList)=>{return <CardTemplate {...restaurantList.data} key={restaurantList.data.id}/>})}
+      
+   
 </div>
   );
 }

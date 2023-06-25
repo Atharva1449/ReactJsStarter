@@ -1,37 +1,38 @@
-.navbar{
-display: flex;
-justify-content: space-between;
-/* position: fixed;
-top: 0;
-  right: 0;
-  left: 0;
-  z-index: 9999; Ensure the navbar stays on top of other elements */
-box-shadow: 5px 10px 18px #888888;
 
-}
-.listElements >ul{
-list-style-type: none;
-display: flex;
-}
-.listElements>ul>li{
-    padding: 10px;
-}
-.logo{
-   width: 100px  ;
-   
-}
-.logoanchor{
-    display: flex;
-}
-.card{
-  width: 200px;
-margin: 10px;
-padding: 10px;
-}
-.card>img{
-  width:100%
-}
-.restaurantCardsList{
+.navbar{
   display: flex;
-  flex-wrap: wrap;
-}
+  justify-content: space-between;
+  /* position: fixed;
+  top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999; Ensure the navbar stays on top of other elements */
+  box-shadow: 5px 10px 18px #888888;
+  
+  }
+  .listElements >ul{
+  list-style-type: none;
+  display: flex;
+  }
+  .listElements>ul>li{
+      padding: 10px;
+  }
+  .logo{
+     width: 100px  ;
+     
+  }
+  .logoanchor{
+      display: flex;
+  }
+  .card{
+    width: 200px;
+  margin: 10px;
+  padding: 10px;
+  }
+  .card>img{
+    width:100%
+  }
+  .restaurantCardsList{
+    display: flex;
+    flex-wrap: wrap;
+  }
