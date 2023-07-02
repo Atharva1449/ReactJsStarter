@@ -7,7 +7,8 @@ function filterSearchtext(searchTextValueParam,restaurantListDataParam){
    }
    
 const Body=()=>{
-    const [restaurantListData,setRestaurantListData]=useState(restaurantList);
+    const [restaurantListData,setRestaurantListData]=useState([]);
+const [restaurantFilterData,setRestaurantFilterData]=useState([]);
     const [searchTextValue,setSearchTextValue]=useState();
   useEffect(()=>{getRestaurants()},[]);
 
@@ -15,7 +16,10 @@ const Body=()=>{
   const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4598568&lng=73.8430205&page_type=DESKTOP_WEB_LISTING");
     const jsonData=await data.json();
     setRestaurantListData(jsonData?.data?.cards[2]?.data?.data?.cards);
+    setRestaurantFilterData(jsonData?.data?.cards[2]?.data?.data?.cards);
+    
 }
+
     return (
         <>
         <input
@@ -26,12 +30,12 @@ const Body=()=>{
         ></input>
         <button
         onClick={ ()=>{
-        setRestaurantListData(filterSearchtext(searchTextValue,restaurantListData))}
+          setRestaurantFilterData(filterSearchtext(searchTextValue,restaurantListData))}
         }
         >Search for {searchTextValue}
         </button>
       <div className="restaurantCardsList">
-        { restaurantListData.map((restaurantListsparam)=>{return <CardTemplate {...restaurantListsparam.data} key={restaurantListsparam.data.id}/>})}
+        { restaurantFilterData.map((restaurantListsparam)=>{return <CardTemplate {...restaurantListsparam.data} key={restaurantListsparam.data.id}/>})}
         
      
   </div></>
