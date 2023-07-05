@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 const Title=()=>{
     return(
       <a className="logoanchor" href="\">
@@ -13,9 +13,9 @@ const Title=()=>{
         <Title></Title>
         <div className="listElements">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contactus</Link></li>
             <li>Cart</li>
           </ul>
         </div>

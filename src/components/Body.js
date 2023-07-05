@@ -1,6 +1,8 @@
 import { CardTemplate } from "./Card.js";
-import { restaurantList } from "../constants.js"
+import { restaurantList } from "../constants.js";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer.js";
+
 function filterSearchtext(searchTextValueParam,restaurantListDataParam){
     return restaurantListDataParam.filter((restaurantListDataParam2)=>
     ( restaurantListDataParam2.data.name.includes(searchTextValueParam)));
@@ -20,7 +22,7 @@ const [restaurantFilterData,setRestaurantFilterData]=useState([]);
     
 }
 
-    return (
+    return (restaurantFilterData.length===0) ? <Shimmer/> : (
         <>
         <input
         type="text"
